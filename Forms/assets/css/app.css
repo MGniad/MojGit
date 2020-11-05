@@ -1,0 +1,165 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+form .row {
+    margin: 0 0 15px 0;
+}
+
+form .default-label {
+    font-weight: 700;
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #000000;
+
+}
+
+input::placeholder {
+    color: #8a0303;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border: 3px solid #000000;
+    background-color: #efefef
+}
+
+input:disabled {
+    opacity: 0.2;
+}
+
+select {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #000000;
+    appearance: none;
+    background: url(../img/arrow-down-sign-to-navigate.png) no-repeat right 10px center;
+    background-size: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #000000;
+    min-height: 130px;
+    resize: vertical;
+}
+
+/*
+RADIO
+*/
+input[type="radio"] {
+    display: none;
+}
+
+.default-radio-label {
+    position: relative;
+    display: block;
+    padding: 0 0 0 20px;
+}
+
+.default-radio-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+}
+
+.default-radio-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: salmon;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    opacity: 0;
+    transition: .3s;
+}
+
+input[type="radio"]:checked+.default-radio-label::after {
+    opacity: 1;
+}
+
+/*
+CHECKBOX
+*/
+input[type="checkbox"] {
+    display: none;
+}
+
+.default-checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+
+}
+
+.default-checkbox-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+
+    border-radius: 0;
+    left: 0;
+    top: 0;
+    transition: .3s;
+}
+
+.default-checkbox-label::after {
+
+    position: absolute;
+    content: "";
+    display: block;
+    left: 6px;
+    top: 1px;
+    width: 9px;
+    height: 15px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked+.default-checkbox-label::before {
+    background-color: salmon
+}
+
+input[type="checkbox"]:checked+.default-checkbox-label::after {
+    opacity: 1;
+}

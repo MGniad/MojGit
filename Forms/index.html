@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/modern-normalize.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <h1>Formularz kontaktowy</h1>
+    <!-- <form action="https://blog.apppi.pl/form" method="POST"></form> -->
+    <form action="" method="GET" enctype="multipart/form-data">
+        <div class="row">
+            <label for="input-name-surname" class="default-label">Imię i nazwisko</label>
+            <input type="text" name="name-surname" id="input-name-surname" placeholder="Wpisz imię i nazwisko"
+                value="Marek Gniady">
+        </div>
+
+        <div class="row">
+            <label for="input-email" class="default-label">Podaj adres e-mail</label>
+            <input type="email" name="email" id="input-email" placeholder="test@test.pl">
+        </div>
+        <div class="row">
+            <label for="input-code" class="default-label">Podaj tajny kod</label>
+            <input type="password" name="code" disabled id="input-code">
+        </div>
+
+        <div class="row">
+            <label for="input-country" class="default-label">Wybierz kraj</label>
+            <select name="country" id="input-country">
+                <option value="">Wybierz swój kraj</option>
+                <option value="pl">Polska</option>
+                <option value="de">Niemcy</option>
+                <option value="ru" selected>Rosja</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="text-area-messsage" class="default-label">Napisz wiadomość</label>
+            <textarea name="message" id="text-area-messsage">To jest uzupełniona text-area</textarea>
+        </div>
+        <p class="default-label">Wybierz płeć</p>
+        <div class="row">
+            <input type="radio" name="sex" value="female" id="radio-female">
+            <label for="radio-female" class="default-radio-label">Kobieta</label>
+            <input type="radio" name="sex" value="male" id="radio-male">
+            <label for="radio-male" class="default-radio-label">Mężczyzna</label>
+        </div>
+        <p class="default-label">Wybierz zainteresowania</p>
+        <div class="row">
+            <input type="checkbox" name="hobby[]" value="sport" id="hobby-sport">
+            <label for="hobby-sport" class="default-checkbox-label">Sport</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" name="hobby[]" value="books" id="hobby-books">
+            <label for="hobby-books" class="default-checkbox-label">Książki</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" name="hobby[]" value="programming" id="hobby-programming">
+            <label for="hobby-programming" class="default-checkbox-label">Programowanie</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" name="hobby[]" value="sleeping" id="hobby-sleeping">
+            <label for="hobby-sleeping" class="default-checkbox-label">Spanie</label>
+        </div>
+
+        <div class="row">
+            <label for="input-attachment" class="default-label">Dodaj załącznik</label>
+            <input type="file" name="attachment" id="input-attachment">
+        </div>
+        <div class="row">
+            <button type="submit" class="default-label">Wyślij formularz</button>
+        </div>
+        <!-- <div class="row">
+            <label>
+                testowy label
+                <input type="text" name="test">
+            </label> -->
+
+        </div>
+    </form>
+</body>
+
+</html>
