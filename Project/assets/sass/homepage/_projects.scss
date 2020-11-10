@@ -1,0 +1,129 @@
+.projects {
+    background-color: $projectBackgroundColor;
+    padding: 100px 0 70px;
+
+    .container {
+        h5 {
+            font-size: 12px;
+            color: #939393;
+            margin: 0 0 5px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        h2 {
+            @include fluid-type(20px, 32px);
+            text-align: center;
+            width: 50%;
+            margin: 0 auto 50px;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .box-projects {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        .project {
+            width: calc(100%/3);
+            padding: 0 15px;
+            margin: 0 0 30px;
+
+            @media(max-width:992px) {
+                width: 50%;
+            }
+
+            @media(max-width:600px) {
+                width: 100%;
+            }
+
+
+            .photo {
+                position: relative;
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $projectPhotoOverlayColor;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+
+                }
+
+                &:hover::after {
+                    opacity: 0.7;
+                }
+
+                &:hover a {
+                    opacity: 1;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+
+
+                }
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 46px;
+                    height: 46px;
+                    font-size: 25px;
+                    color: $projectPrimaryIconColor;
+                    background-color: $projectSecondaryIconColor;
+                    border: 2px solid $projectSecondaryIconColor;
+                    border-radius: 50%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 3;
+                    opacity: 0;
+
+                    &:first-of-type {
+                        left: calc(50% - 61px);
+                    }
+
+                    &:last-of-type {
+                        left: calc(50% + 15px)
+                    }
+
+
+                }
+            }
+
+            .project-info {
+                background-color: $secondaryColor;
+                padding: 15px;
+                text-align: center;
+
+                .title {
+                    text-align: center;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-family: $headerFontFamily;
+                    margin: 0 0 10px;
+                    font-weight: 600;
+                }
+
+                .genre {
+                    text-align: center;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    margin: 0;
+                    color: $primaryTextColor;
+                }
+            }
+        }
+    }
+}

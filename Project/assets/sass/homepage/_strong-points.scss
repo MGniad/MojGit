@@ -1,0 +1,68 @@
+.strong-points {
+
+    .container-fluid {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
+
+
+
+        .row {
+            margin: 0 -15px;
+            display: flex;
+            flex-wrap: wrap;
+
+
+            .strong-box {
+                align-items: center;
+
+                width: 25%;
+                padding: 0 15px;
+                border-bottom: 1px solid $strongBorderColor;
+                border-left: 1px solid $strongBorderColor;
+
+                &:first-of-type {
+                    border-left: none;
+                }
+
+                @media(max-width: 992px) {
+                    width: 50%;
+
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                    border-left: none;
+
+                }
+
+                .box-content {
+                    display: flex;
+                    padding: 15%;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    i {
+                        color: $strongIconColor;
+                        font-size: 50px;
+                    }
+
+                    span {
+                        font-size: 15px;
+                        margin: 15px 0 5px;
+                        color: $strongMainColor;
+                        font-weight: 600;
+                        font-family: $headerFontFamily;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: $strongSecondaryColor;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,264 @@
+.footer-widget {
+    padding: 100px 0;
+    background-color: $footerMainBackgroundColor;
+
+    .container {
+        .row {
+            display: flex;
+            flex: wrap;
+
+            .box {
+                width: 25%;
+                padding: 0 15px;
+                margin: 0 0 30px;
+                border-left: 1px solid $footerBorderColor;
+
+                h6 {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: $footerMainHeader;
+                    margin: 0 0 10px 0;
+                }
+
+                p {
+                    color: $footerMainText;
+                    font-size: 12px;
+                }
+
+                &:first-of-type {
+                    border-left: none;
+                }
+
+                @media(max-width: 992px) {
+                    width: 50%;
+                    border: none;
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+
+                }
+
+                &.company {
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 20px;
+
+                    img {
+                        text-align: left;
+                        margin-bottom: 20px;
+                    }
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            display: inline-block;
+                            margin: 0 8px;
+
+                            &:first-of-type {
+                                margin-left: 0;
+                            }
+
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+
+                            i {
+                                display: inline;
+                                color: $footerIconColor;
+                            }
+                        }
+                    }
+
+
+
+                }
+
+                &.links {
+                    ul {
+                        line-height: 20px;
+                        padding: 0;
+                        margin: 0;
+
+                        a {
+                            color: $footerMainText;
+                            font-size: 12px;
+                            transition: .3s;
+
+                            &:hover {
+                                color: $footerIconHover;
+                            }
+                        }
+                    }
+                }
+
+                &.contact {
+                    p {
+                        line-height: 20px;
+
+                        a {
+                            color: $footerMainText;
+                            font-size: 12px;
+
+
+                        }
+
+
+
+                    }
+
+                    .direction {
+                        color: $footerMainText;
+                        font-size: 12px;
+                        text-decoration: underline;
+                        text-transform: uppercase;
+                        transition: .3s;
+
+                        &:hover {
+                            color: $footerIconHover;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                &.instagram {
+                    ul {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        padding: 0;
+                        margin: 0;
+
+                        .box-in {
+                            width: calc(100%/3);
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            overflow: hidden;
+
+
+                            &:hover span {
+                                opacity: 0.7;
+                                bottom: 4px
+                            }
+
+
+                            li {
+
+                                padding: 0 10px 10px 0;
+
+                                a {
+                                    position: relative;
+
+
+
+                                    &::after {
+                                        content: "";
+                                        background-color: $primaryColor;
+                                        height: 33%;
+                                        width: 100%;
+                                        z-index: 3;
+
+                                    }
+
+
+
+                                    img {
+                                        max-width: 100%;
+                                        height: auto;
+
+
+                                    }
+
+
+                                }
+                            }
+
+                            span {
+                                display: block;
+                                width: 100%;
+                                background-color: $primaryColor;
+                                position: absolute;
+                                bottom: -50px;
+                                left: 0;
+                                font-size: 20px;
+                                color: $footerIconColor;
+                                text-align: center;
+                                opacity: 0;
+                                transition: .1s;
+
+                                &:hover {
+                                    opacity: 0.7;
+                                    bottom: 4px
+                                }
+                            }
+                        }
+
+
+
+
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.footer-credits {
+    padding: 50px 0;
+    background-color: $footerSecondaryBackgroundColor;
+    margin: 0;
+
+    .row {
+        .text-left {
+            color: $footerMainText;
+            display: flex;
+            text-align: left;
+            padding: 0 15px;
+            font-size: 12px;
+            width: 50%;
+
+            p {
+                margin: 0;
+            }
+
+            a {
+                color: $footerMainText;
+                font-size: 12px;
+                transition: .3s;
+
+                &:hover {
+                    color: $footerIconHover;
+                }
+
+            }
+        }
+
+        .text-right {
+            width: 50%;
+            text-align: right;
+            padding: 0 15px;
+            font-size: 12px;
+
+            a {
+                color: $footerMainText;
+                transition: .3s;
+
+                &:first-of-type {
+                    border-right: 2px solid $footerBorderColor;
+                    padding: 0 3px 0 0;
+                }
+
+                &:hover {
+                    color: $footerIconHover;
+                }
+            }
+
+        }
+    }
+}
